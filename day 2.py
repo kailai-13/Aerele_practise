@@ -22,24 +22,22 @@ def process_students(students):
     return result
 
 #documented code
-def isPass(marks :int)-> bool:
+type studentData = dict[str,int]
+type studentResult= dict[str,str]
+def is_pass(marks :int)-> bool:
     """gets marks as input and returns True if pass i.e. marks>=50 else False"""
-    if marks>=50:
-        return True
-    return False
-def process_current_student(student :dict[str,int])->dict[str,str]:
+    return marks>=50
+def process_current_student(student : studentData)-> studentResult:
     """takes one student object and assigns grade to the corresponding name ,prints it and returns it"""
-    grade = "Fail"
-    if isPass(student["marks"]):
-        grade="Pass"
+    grade = "Pass" if is_pass(student["marks"]) else "Fail"
     print(student["name"],grade)
     return {"name": student["name"],"grade":grade}
-def process_all_students(students :list[dict[str,int]])-> list[dict[str,str]]:
+def process_all_students(students :list[studentData])-> list[studentResult]:
     """goes through students one by one and assigns grades using above function, adds it and returns it"""
     result=[]
     for student in students:
-        object=process_current_student(student)
-        result.append(object)
+        student_result=process_current_student(student)
+        result.append(student_result)
     return result
 #data we need
 students=[{"name":"kailai","marks":70},{"name":"ajay","marks":45},{"name":"seetha","marks":88}]
