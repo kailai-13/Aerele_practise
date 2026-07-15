@@ -2,7 +2,7 @@ from enum import Enum
 from dataclasses import dataclass
 
 class Status(Enum):
-    """Used store repeated values or strings in more clear and efficient way"""
+    """Used store repeated values or strings in more clear and efficient ways"""
     PAID="Paid"
     DRAFT="Draft"
     CANCELLED="Cancelled"

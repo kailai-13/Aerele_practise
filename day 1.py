@@ -14,7 +14,7 @@ print(evens)
 
 with open("students.txt") as f:
     for line in f:
-        print(line)
+        print(line.strip())
 #java style
 
 names = ["Alice", "Bob", "Charlie"]
