@@ -25,22 +25,22 @@ class Validate:
             raise ValueError("Customer name is missing!")
         if self.invoice.amount<0:
             raise ValueError("Amount can't be less than 0!")
-        if self.invoice.tax<9:
+        if self.invoice.tax<0:
             raise ValueError("Tax can't be less than 0!")
         if not self.invoice.status:
             raise ValueError("Status can't be empty!")
         return "Validation Successfull"
     
 #Example showcase is below
+if __name__=="__main__":
+    invoice1=Invoice("IN01","KAILAI",1200.22,100,Status.PAID)
+    print(invoice1)
 
-invoice1=Invoice("IN01","KAILAI",1200.22,100,Status.PAID)
-print(invoice1)
+    v=Validate(invoice1)
+    print(v.validation())
 
-v=Validate(invoice1)
-print(v.validation())
+    invoice2=Invoice("","",11,22,Status.DRAFT)
+    print(invoice2)
 
-invoice2=Invoice("","",11,22,Status.DRAFT)
-print(invoice2)
-
-v2=Validate(invoice2)
-print(v2.validation())
+    v2=Validate(invoice2)
+    print(v2.validation())

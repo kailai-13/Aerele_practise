@@ -33,8 +33,8 @@ def process_students(students):
     return result,summ/len(students),pass_count,fail_count
 
 #documented code
-type studentData = dict[str,int]
-type studentResult= dict[str,str]
+"""type studentData = dict[str,int]
+type studentResult= dict[str,str]"""
 
 
 def is_pass(marks :int)-> bool:
