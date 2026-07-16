@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypackage"
+version = "1.0.0"
+description = "A simple practice package"
+authors = [
+    { name = "Kailai Nathan" }
+]
+requires-python = ">=3.10"
+
+[tool.setuptools]
+py-modules = ["calculate_tax", "math","main"]
+
+[project.scripts]
+package = "main:main"

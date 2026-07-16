@@ -1,0 +1,9 @@
+calculate_tax.py
+main.py
+math.py
+pyproject.toml
+mypackage.egg-info/PKG-INFO
+mypackage.egg-info/SOURCES.txt
+mypackage.egg-info/dependency_links.txt
+mypackage.egg-info/entry_points.txt
+mypackage.egg-info/top_level.txt

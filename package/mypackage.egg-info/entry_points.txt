@@ -1,0 +1,2 @@
+[console_scripts]
+package = main:main
