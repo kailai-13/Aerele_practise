@@ -39,8 +39,10 @@ if __name__=="__main__":
     v=Validate(invoice1)
     print(v.validation())
 
-    invoice2=Invoice("","",11,22,Status.DRAFT)
+    invoice2=Invoice("hi","dda",11,22,Status.DRAFT)
     print(invoice2)
 
     v2=Validate(invoice2)
     print(v2.validation())
+
+    print(__name__)
